@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta para ti ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- CORAZONES FLOTANTES -->
+    <div class="corazones-fondo">
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+    </div>
+
+    <!-- PORTADA DE BIENVENIDA -->
+     <audio id="musicaFondo" src="musica/cancion.mp3" loop preload="auto"></audio>
+     
+<section id="portada" class="portada" style="position:fixed; inset:0; z-index:99999; display:flex; opacity:1; visibility:visible; background:#f8e9dc; justify-content:center; align-items:center;">    <div class="portada-contenido">
+
+        <h1>Tengo algo para ti...</h1>
+
+        <div class="corazon-portada">♡</div>
+
+        <p>Una pequeña sorpresa hecha con mucho cariño.</p>
+
+        <button onclick="comenzarHistoria()">
+            Abrir sorpresa ❤️
+        </button>
+
+    </div>
+</section>
+
+    <main id="librito">
+
+        <!-- ESCENA 1: POLLITO CARTERO -->
+<section id="escena1" class="escena activa">
+    <div class="contenido">
+        <h2 class="frase">Hey preciosa, te mandaron estas cartas ❤️</h2>
+
+        <img src="imagenes/pollito.png" alt="Pollito cartero" class="ilustracion">
+
+        <button onclick="irAEscena(2)">Recibir carta ❤️</button>
+    </div>
+</section>
+
+        <!-- ESCENA 2: SOBRE CERRADO -->
+<section id="escena2" class="escena">
+    <div class="contenido">
+        <h2 class="frase">Esa inicial... ¿Para quién será?</h2>
+
+        <img src="imagenes/sobre-cerrado.png" alt="Sobre cerrado" class="ilustracion">
+
+        <button onclick="irAEscena(3)">Abrir sobre</button>
+        <button class="boton-volver" onclick="irAEscena(1)">Volver</button>
+    </div>
+</section>
+
+        <!-- ESCENA 3: SOBRE ABIERTO -->
+<section id="escena3" class="escena">
+    <div class="contenido">
+        <h2 class="frase">¿Abrámoslo, no? ❤️</h2>
+
+        <img src="imagenes/sobre-abierto.png" alt="Sobre abierto" class="ilustracion">
+
+        <button onclick="irAEscena(4)">Sacar carta</button>
+        <button class="boton-volver" onclick="irAEscena(2)">Volver</button>
+    </div>
+</section>
+
+<!-- ESCENA 4: CARTA EXTRAÍDA -->
+<section id="escena4" class="escena">
+    <div class="contenido">
+        <h2 class="frase">¿Qué dirá? 💌</h2>
+
+        <img src="imagenes/carta4.png" alt="Carta extraída del sobre" class="ilustracion">
+
+        <button onclick="irAEscena(5)">Leer carta ❤️</button>
+        <button class="boton-volver" onclick="irAEscena(3)">Volver</button>
+    </div>
+</section>
+
+        <!-- ESCENA 5: CARTA FINAL -->
+        <section id="escena5" class="escena">
+    <div class="contenido carta-contenido">
+
+        <div class="brillo-final">
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+        </div>
+
+        <img src="imagenes/carta-final.png" alt="Carta romántica" class="carta-imagen">
+
+        <button class="boton-volver" onclick="irAEscena(4)">Volver</button>
+
+    </div>
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
